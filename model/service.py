@@ -73,7 +73,8 @@ def generate_unique_id():
 
         return last_id + 1
     except FileNotFoundError:
-        print(f"File '{CSV_FILE_PATH}' not found.")
+        print(f"File '{CSV_FILE_PATH}' not found. It will be created now")
+        return 1
     except Exception as e:
         print(f"An error occurred: {e}")
 
